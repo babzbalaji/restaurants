@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .form-control{
+            border-radius: 0px;
+        }
+        .form-control:active,
+        .form-control:focus,
+        .form-control:focus:active
+        {
+            outline: none!important;
+            box-shadow: none;
+            border-radius: 0px;
+            border: 1px solid #000;
+        
+        }
+        table{
+            border: 2px solid cornflowerblue;
+        }
+        td{
+            border: 2px solid cornflowerblue ;
+        }
+        th{
+            background-color: cornflowerblue;
+            color: #fff;
+        }
+        .dropdown-class{
+            margin-top: 100px;
+        }
+        label{
+            font-size: 20px;
+        }
+        #drop{
+            width: 200px;
+        }
+        h3{
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+      </style>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Restaurants</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="table">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Enter Values</h4>
+                    <h3 id="alert">Please fill Values</h3>
+                    <input type="text" id="dish"  placeholder="Enter Dish Name" class="form-control mt-3">
+                    <input type="number" id="quantity" placeholder="Enter Quantity"  class="form-control mt-3">
+                    <input type="number" id="amount" placeholder="Enter Amount"  class="form-control mt-3">
+                    <input type="submit" onclick="addItems()" value="Submit" class="btn btn-danger mt-4">
+                </div>
+                <div class="col-md-8">
+                    <table class="mt-5">
+                        <thead>
+                            <tr>
+                                <th class="pl-5 pr-5">Dish Name</th>
+                                <th class="pl-5 pr-5">Quantity</th>
+                                <th class="pl-5 pr-5">Amount</th>
+                                <th class="pl-5 pr-5">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="showDish"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dropdown-class">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <form action="/action_page.php">    
+                        <select class="form-control" onchange="dropValues()" id="drop" name="cars">
+                            <option value="">Select Country</option>
+                          <option value="91">India</option>
+                          <option value="12">Africa</option>
+                          <option value="23">German</option>
+                          <option value="34">France</option>
+                        </select>
+                      </form>
+                </div>
+                <div class="col-4">
+                    <input type="text" id="countryInsert" placeholder="Country Code" value="" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
