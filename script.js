@@ -29,13 +29,7 @@ function addItems(){
     deleteButton.innerHTML = "X"
 
     //Add Css
-    newCell.style.paddingLeft = "50px";
-    newCell1.style.paddingLeft = "50px";
-    newCell2.style.paddingLeft = "50px";
     deleteButton.style.marginLeft = "50px";
-    newCell.style.paddingRight = "50px";
-    newCell1.style.paddingRight = "50px";
-    newCell2.style.paddingRight = "50px";
     deleteButton.style.marginRight = "50px";
     
     //Add Classto Button
